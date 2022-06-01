@@ -7,14 +7,41 @@
     <title>Document</title>
     <!-- <link rel="stylesheet" href="style.css"> -->
     <style>
-        @import url('style.css');
-        p {
-            color:aqua;
+        /* @import url('style.css'); */
+        h2 {
+            color: red;
         }
+        /* class選取器，可重複使用 */
+        .abc {
+            color: pink;
+        }
+        /* id選取器，只可使用一次 */
+        #xyz {
+            color:#00cccc;
+        }
+        
+        /* 
+            選取器命名規範
+            1. 開頭只可使用英文與底線
+            2. 符號只可使用_ -
+        */
     </style>
 </head>
 <body>
     <h1 style="color: rgb(222, 255, 58)">title</h1>
+    <h2>title</h2>
+    <p class="abc">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolor ad explicabo accusamus non fugiat, nemo expedita dolores. Blanditiis, iste vero repellat impedit quas vel molestias accusamus quam veritatis! Molestiae.
+    </p>
+    <h2>title</h2>
+    <p id="xyz">
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolor ad explicabo accusamus non fugiat, nemo expedita dolores. Blanditiis, iste vero repellat impedit quas vel molestias accusamus quam veritatis! Molestiae.
+    </p>
+    <h2>title</h2>
+    <p>
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolor ad explicabo accusamus non fugiat, nemo expedita dolores. Blanditiis, iste vero repellat impedit quas vel molestias accusamus quam veritatis! Molestiae.
+    </p>
+    <h2>title</h2>
     <p>
         Lorem ipsum dolor sit amet consectetur adipisicing elit. Id dolor ad explicabo accusamus non fugiat, nemo expedita dolores. Blanditiis, iste vero repellat impedit quas vel molestias accusamus quam veritatis! Molestiae.
     </p>
