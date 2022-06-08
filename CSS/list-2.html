@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        ol {
+            counter-reset: my-counter;
+            list-style: none;
+        }
+        /* 虛擬元素 */
+        li::before {
+            counter-increment: my-counter;
+            content: '['counter(my-counter)']:'
+        }
+        .container {
+            counter-reset: my-title;
+        }
+        .container h2::before {
+            counter-increment: my-title;
+            content: '第'counter(my-title,cjk-ideographic)'章--'
+        }
+    </style>
+</head>
+<body>
+    <ol>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+        <li>asdf</li>
+    </ol>
+    <div class="container">
+        <h2>電腦視覺之機器學習</h2>
+        <h2>視覺機器學習模型</h2>
+        <h2>影像視覺</h2>
+        <h2>物件偵測與影像分割</h2>
+        <h2>建立視覺資料集</h2>
+    </div>
+</body>
+</html>
