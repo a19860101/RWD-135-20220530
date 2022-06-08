@@ -25,19 +25,46 @@
             text-decoration: none;
             border-radius: 5px;
         }
+        /* 
+            inline-block 問題
+            元素之間有4px不等的空隙
+
+            解決步驟
+            1. 父元素font-size:0;
+            2. 自己的font-size還原
+            3*. 設定vertical-align 
+        */
+        body {
+            font-size: 0;
+        }
+        .box {
+            font-size: 16px;
+            vertical-align: top;
+            /* top, middle, bottom ,baseline */
+            margin: 10px;
+        }
     </style>
 </head>
 <body>
     <div class="box">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+        </p>
         <a href="#">more</a>
     </div>
     <div class="box">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+        </p>
         <a href="#">more</a>
     </div>
     <div class="box">
-        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+        <p>
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+            Lorem ipsum dolor sit, amet consectetur adipisicing elit. Enim quisquam doloribus praesentium excepturi soluta error quae commodi magni rem, illum harum, ad voluptates consequuntur saepe. Perspiciatis consequatur odio magni nulla!
+        </p>
         <a href="#">more</a>
     </div>
 </body>
