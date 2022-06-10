@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            background-color: #ccc;
+            display: flex;
+            flex-direction: row;
+        }
+        .box {
+            /* width: 200px; */
+            flex-basis: 200px;
+            height: 200px;
+        }
+         /* 
+                flex-direction為row時，flex-basis代表水平
+                flex-direction為column時，flex-basis代表垂直
+            */
+        .box:nth-of-type(1){
+            background-color: #098;
+            flex-grow: 2;
+        }
+        .box:nth-of-type(2){
+            background-color: #fa0;
+            flex-grow: 3;
+        }
+        .box:nth-of-type(3){
+            background-color: #fd7b93;
+            flex-grow: 4;
+        }
+        .box:nth-of-type(4){
+            background-color: #61a5ff;
+            flex-grow:1;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+        <div class="box"></div>
+    </div>
+</body>
+</html>
