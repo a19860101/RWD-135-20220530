@@ -5,13 +5,39 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        * {
+            font-family: 'Ping Fang TC','微軟正黑體','sans-serif';
+        }
+        body {
+            background-color: #e6e3e3;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        .item {
+            flex: 0 0 300px;
+            /* flex:[grow shrink basis] */
+            padding: 15px;
+        }
+        .item-body {
+            background-color: #fff;
+            border-bottom: 5px solid #098;
+        }
+        .item-content {
+            padding: 25px 15px;
+        }
+    </style>
 </head>
 <body>
     <div class="container">
         <div class="item">
             <div class="item-body">
                 <div class="item-cover">
-                    <img src="https://picsum.photos/320/180?random=1" alt="">
+                    <img src="https://picsum.photos/id/77/320/180" alt="">
                 </div>
                 <div class="item-content">
                     <h3>Motion Graphics新手村 | Ai+Ps超實用攻略</h3>
@@ -22,6 +48,7 @@
                 </div>
             </div>
         </div>
+        
     </div>
 </body>
 </html>
