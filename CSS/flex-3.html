@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            align-items: center;
+        }
+        .box {
+            width: 400px;
+            padding: 15px;
+        }
+        .box:nth-of-type(1){
+            background-color: #098;
+            align-self: flex-start;
+
+            order: 2;
+        }
+        .box:nth-of-type(2) {
+            order: 1;
+        }
+        .box:nth-of-type(3){
+            background-color: #fa0;
+            align-self: flex-end;
+        }
+        /* 
+            沒有設定order的會優先排序，再來才排序order
+        */
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <h2>title 1</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum obcaecati, eius sed quod asperiores sapiente rerum illo ducimus, inventore est voluptatem repellat voluptatibus totam, nisi eaque possimus? Deserunt, delectus nihil?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 2</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum obcaecati, eius sed quod asperiores sapiente rerum illo ducimus, inventore est voluptatem repellat voluptatibus totam, nisi eaque possimus? Deserunt, delectus nihil?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum obcaecati, eius sed quod asperiores sapiente rerum illo ducimus, inventore est voluptatem repellat voluptatibus totam, nisi eaque possimus? Deserunt, delectus nihil?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum obcaecati, eius sed quod asperiores sapiente rerum illo ducimus, inventore est voluptatem repellat voluptatibus totam, nisi eaque possimus? Deserunt, delectus nihil?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum obcaecati, eius sed quod asperiores sapiente rerum illo ducimus, inventore est voluptatem repellat voluptatibus totam, nisi eaque possimus? Deserunt, delectus nihil?
+            </p>
+        </div>
+        <div class="box">
+            <h2>title 3</h2>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum obcaecati, eius sed quod asperiores sapiente rerum illo ducimus, inventore est voluptatem repellat voluptatibus totam, nisi eaque possimus? Deserunt, delectus nihil?
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum obcaecati, eius sed quod asperiores sapiente rerum illo ducimus, inventore est voluptatem repellat voluptatibus totam, nisi eaque possimus? Deserunt, delectus nihil?
+            </p>
+        </div>
+    </div>
+</body>
+</html>
