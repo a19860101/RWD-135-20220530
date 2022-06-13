@@ -21,6 +21,38 @@
             background-color: #098;
             position: relative;
             z-index: 1;
+
+            left: 50px;
+            top: 50px;
+        }
+
+        .abs {
+            width: 100px;
+            height: 100px;
+            background-color: crimson;
+
+            position: absolute;
+            /* top,bottom,left,right,z-index */
+
+            z-index: 3;
+            bottom: 100px;
+            right: 0;
+            /* 絕對定位如果外層沒有靜態以外的其他定位，絕對定位就會以body當作基準 */
+        }
+        .wrapper {
+            width: 600px;
+            height: 300px;
+            background-color: #ccc;
+            position: relative;
+        }
+        .abs2 {
+            width: 100px;
+            height: 100px;
+            background-color: #234;
+
+            position: absolute;
+            bottom: 0;
+            right: 0;
         }
     </style>
 </head>
@@ -35,5 +67,9 @@
      -->
     <div class="box"></div>
     <div class="box-2"></div>
+    <div class="abs"></div>
+    <div class="wrapper">
+        <div class="abs2"></div>
+    </div>
 </body>
 </html>
