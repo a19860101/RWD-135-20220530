@@ -25,9 +25,7 @@
             flex-wrap: wrap;
             padding-block: 100px;
         }
-        .item-cover {
-            position: relative;
-        }
+
         .avatar {
             width: 70px;
             height: 70px;
@@ -38,6 +36,7 @@
             top: -35px;
             left: 10px;
             border: 2px solid #fff;
+            z-index: 10;
         }
         .item {
             flex: 0 0 300px;
@@ -49,6 +48,7 @@
         .item-body {
             background-color: #fff;
             border-bottom: 5px solid #098;
+            position: relative;
         }
         .item-content {
             padding: 20px 15px;
@@ -73,17 +73,25 @@
             float: right;
             margin-top: -25px;
         }
-        
+        .item-cover {
+            overflow: hidden;
+        }
+        .item-cover img {
+            transition: 200ms ease-out;
+        }
+        .item-cover:hover  img {
+            transform: scale(1.3);
+        }
     </style>
 </head>
 <body>
     <div class="container">
         <div class="item">
             <div class="item-body">
+                <div class="avatar">
+                    <img src="https://picsum.photos/id/74/200/200" alt="">
+                </div>
                 <div class="item-cover">
-                    <div class="avatar">
-                        <img src="https://picsum.photos/id/74/200/200" alt="">
-                    </div>
                     <img src="https://picsum.photos/id/77/320/180" alt="">
                 </div>
                 <div class="item-content">
@@ -98,10 +106,11 @@
         
         <div class="item">
             <div class="item-body">
+                <div class="avatar">
+                    <img src="https://picsum.photos/id/74/200/200" alt="">
+                </div>
                 <div class="item-cover">
-                    <div class="avatar">
-                        <img src="https://picsum.photos/id/74/200/200" alt="">
-                    </div>
+                    
                     <img src="https://picsum.photos/id/77/320/180" alt="">
                 </div>
                 <div class="item-content">
@@ -116,10 +125,11 @@
         
         <div class="item">
             <div class="item-body">
+                <div class="avatar">
+                    <img src="https://picsum.photos/id/74/200/200" alt="">
+                </div>
                 <div class="item-cover">
-                    <div class="avatar">
-                        <img src="https://picsum.photos/id/74/200/200" alt="">
-                    </div>
+                    
                     <img src="https://picsum.photos/id/77/320/180" alt="">
                 </div>
                 <div class="item-content">
@@ -134,10 +144,11 @@
         
         <div class="item">
             <div class="item-body">
+                <div class="avatar">
+                    <img src="https://picsum.photos/id/74/200/200" alt="">
+                </div>
                 <div class="item-cover">
-                    <div class="avatar">
-                        <img src="https://picsum.photos/id/74/200/200" alt="">
-                    </div>
+                    
                     <img src="https://picsum.photos/id/77/320/180" alt="">
                 </div>
                 <div class="item-content">
