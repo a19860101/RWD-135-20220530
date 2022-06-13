@@ -10,12 +10,17 @@
             width: 100px;
             height: 100px;
             background-color: crimson;
-            transition: 300ms;
+            /* transition: 300ms; */
+            transition-property: background-color,width, height;
+            transition-duration: 1s;
+            transition-delay: 0s,1s,2s;
+            /* transition-timing-function: ; */
         }
         /* 虛擬類別 */
         .box:hover {
             background-color: yellow;
-            transform: scale(2);
+            width: 200px;
+            height: 200px;
         }
     </style>
 </head>
