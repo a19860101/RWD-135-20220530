@@ -6,6 +6,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        body {
+            height: 3000px;
+        }
         .box {
             width: 200px;
             height: 200px;
@@ -35,8 +38,8 @@
             /* top,bottom,left,right,z-index */
 
             z-index: 3;
-            bottom: 100px;
-            right: 0;
+            bottom: 300px;
+            right: 300px;
             /* 絕對定位如果外層沒有靜態以外的其他定位，絕對定位就會以body當作基準 */
         }
         .wrapper {
@@ -54,6 +57,25 @@
             bottom: 0;
             right: 0;
         }
+        .fix {
+            width: 100px;
+            height: 100px;
+            background-color: #4b00c5;
+
+            position: fixed;
+            right: 50px;
+            bottom: 50px;
+        }
+        nav {
+            width: 100%;
+            padding-top: 30px;
+            padding-bottom: 30px;
+            background-color: #aaa;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
+        }
     </style>
 </head>
 <body>
@@ -65,11 +87,15 @@
         4. fixed 固定
         5. sticky 黏性
      -->
+    <nav>
+        <a href="#">link</a>
+    </nav>
     <div class="box"></div>
     <div class="box-2"></div>
     <div class="abs"></div>
     <div class="wrapper">
         <div class="abs2"></div>
     </div>
+    <div class="fix"></div>
 </body>
 </html>
