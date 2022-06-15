@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .box {
+            width: 100px;
+            height: 100px;
+            background-color: #097;
+
+            animation: fadeIn 5s;
+        }
+        @keyframes r {
+            from {transform: rotate(0deg);}
+            to {transform: rotate(45deg);}
+        }
+        @keyframes move {
+            from {}
+            to {
+                transform: translate(400px,400px);
+            }
+        }
+        @keyframes fadeIn {
+            from {
+                opacity: 0;
+                transform: scale(0) rotate(180deg);
+            }
+        }
+
+    </style>
+</head>
+<body>
+    <div class="box"></div>
+</body>
+</html>
