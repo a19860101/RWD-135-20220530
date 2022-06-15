@@ -1,0 +1,18 @@
+nav {
+    width: 100%;
+    background-color: #aaa;
+    display: flex;
+    padding-block:15px;
+}
+
+.menu-group {
+    display: flex;
+    /* background-color: #098; */
+    width: 100%;
+}
+.menu-left {
+    margin-left: auto;
+}
+.menu-right {
+    margin-left: auto;
+}
