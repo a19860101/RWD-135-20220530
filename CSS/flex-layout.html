@@ -77,12 +77,28 @@
         }
         .item-cover {
             overflow: hidden;
+            position: relative;
         }
         .item-cover img {
             transition: 200ms ease-out;
         }
         .item-cover:hover  img {
             transform: scale(1.3);
+        }
+        .tag {
+            width: 50px;
+            height: 50px;
+            background-color: #ffffff;
+            position: absolute;
+            transform: translateY(200%);
+            bottom: 15px;
+            left: 15px;
+            border-radius: 50%;
+            z-index: 10;
+            transition: 300ms ease-in-out;
+        }
+        .item-cover:hover .tag {
+            transform: translateY(0);
         }
     </style>
 </head>
@@ -95,6 +111,8 @@
                 </div>
                 <div class="item-cover">
                     <img src="https://picsum.photos/id/77/320/180" alt="">
+                    <div class="tag"></div>
+
                 </div>
                 <div class="item-content">
                     <h3>Motion Graphics新手村 | Ai+Ps超實用攻略</h3>
@@ -114,6 +132,27 @@
                 <div class="item-cover">
                     
                     <img src="https://picsum.photos/id/77/320/180" alt="">
+                    <div class="tag"></div>
+
+                </div>
+                <div class="item-content">
+                    <h3>Motion Graphics新手村 | Ai+Ps超實用攻略</h3>
+                    <div class="rating">23則評價</div>
+                    <div class="duration">課時37分鐘</div>
+                    <div class="students">同學918人</div>
+                    <div class="price">NT$0</div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="item">
+            <div class="item-body">
+                <div class="avatar">
+                    <img src="https://picsum.photos/id/74/200/200" alt="">
+                </div>
+                <div class="item-cover">                    
+                    <img src="https://picsum.photos/id/77/320/180" alt="">
+                    <div class="tag"></div>
                 </div>
                 <div class="item-content">
                     <h3>Motion Graphics新手村 | Ai+Ps超實用攻略</h3>
@@ -131,27 +170,8 @@
                     <img src="https://picsum.photos/id/74/200/200" alt="">
                 </div>
                 <div class="item-cover">
-                    
                     <img src="https://picsum.photos/id/77/320/180" alt="">
-                </div>
-                <div class="item-content">
-                    <h3>Motion Graphics新手村 | Ai+Ps超實用攻略</h3>
-                    <div class="rating">23則評價</div>
-                    <div class="duration">課時37分鐘</div>
-                    <div class="students">同學918人</div>
-                    <div class="price">NT$0</div>
-                </div>
-            </div>
-        </div>
-        
-        <div class="item">
-            <div class="item-body">
-                <div class="avatar">
-                    <img src="https://picsum.photos/id/74/200/200" alt="">
-                </div>
-                <div class="item-cover">
-                    
-                    <img src="https://picsum.photos/id/77/320/180" alt="">
+                    <div class="tag"></div>
                 </div>
                 <div class="item-content">
                     <h3>Motion Graphics新手村 | Ai+Ps超實用攻略</h3>
