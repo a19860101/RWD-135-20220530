@@ -12,18 +12,23 @@
             background-color: #097;
 
             /* animation: move 1s infinite alternate linear; */
-            animation-name: r;
-            animation-duration: 1s;
-            animation-delay: 0s;
-            animation-timing-function: ease;
-            animation-direction: alternate;
+            /* animation-name: r; */
+            /* animation-duration: 1s; */
+            /* animation-delay: 0s; */
+            /* animation-timing-function: ease; */
+            /* animation-direction: alternate; */
             /* normal, alternate, reverse , alternate-reverse */
-            animation-iteration-count: 1;
+            /* animation-iteration-count: 1; */
             /* infinite */
-            animation-fill-mode: forwards;
+            /* animation-fill-mode: forwards; */
             /* forwards, backwards */
-            animation-play-state: running;
+            /* animation-play-state: running; */
             /* paused, running */
+            transition: 500ms;
+        }
+        .box:hover {
+            /* animation: r 500ms forwards; */
+            transform: rotate(45deg);
         }
         @keyframes r {
             from {transform: rotate(0deg);}
