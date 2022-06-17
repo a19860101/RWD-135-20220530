@@ -31,44 +31,28 @@ nav a {
 .menu-right {
     margin-left: auto;
 }
-/* model s */
-#model-s {
-
-    background-image: url('images/model-s.jpg');
+section {
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
 }
-/* modal 3 */
+#model-s {
+    background-image: url('images/model-s.jpg');
+}
 #model-3 {
     background-image: url('images/model-3.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 #model-x {
     background-image: url('images/model-x.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 #model-y {
     background-image: url('images/model-y.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 #powerwall {
     background-image: url('images/power.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 #accessories {
     background-image: url('images/accessories.jpg');
-    background-repeat: no-repeat;
-    background-position: center;
-    background-size: cover;
 }
 .container {
     width: 100%;
@@ -97,26 +81,7 @@ nav a {
 .content {
     margin-top: 150px;
 }
-/* btn */
-.btn {
-    display: inline-block;
-    text-decoration: none;
-    font-size: 14px;
-    padding: 12px;
-    width: 280px;
-    text-align: center;
-    border-radius: 50px;
-    margin-inline:10px;
-    margin-block:30px
-}
-.btn-dark {
-    background-color: rgba(34, 34, 34, 0.8);
-    color: #eee!important;
-}
-.btn-light {
-    background-color: rgba(210, 210, 210, 0.8);
-    color: #222;
-}
+
 
 footer  {
     padding-block:30px;
