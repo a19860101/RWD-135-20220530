@@ -50,7 +50,7 @@ nav {
 } */
 
 /* 背景等比例 */
-header {
+/* header {
     width: 100%;
     background-color: #098;
     background-image: url('http://picsum.photos/id/14/1600/1000');
@@ -58,4 +58,21 @@ header {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+} */
+
+/* img 固定高度 */
+/* header {
+    width: 100%;
+    height: 600px;
+}
+header img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+} */
+
+/* img 等比例 */
+header img {
+    width: 100%;
 }
