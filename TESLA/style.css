@@ -58,6 +58,18 @@ nav a {
     background-position: center;
     background-size: cover;
 }
+#powerwall {
+    background-image: url('images/power.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+#accessories {
+    background-image: url('images/accessories.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
 .container {
     width: 100%;
     height: 100vh;
