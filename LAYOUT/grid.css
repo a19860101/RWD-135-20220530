@@ -1,0 +1,13 @@
+.container {
+    width: 1200px;
+    margin-inline: auto;
+}
+.row {
+    display: flex;
+    flex-wrap: wrap;
+}
+.col {
+    flex: 1 0 0;
+    /* flex: grow shrink basis */
+    padding:15px ;
+}
