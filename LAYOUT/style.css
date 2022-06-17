@@ -1,0 +1,15 @@
+nav {
+    width: 100%;
+    display: flex;
+}
+.menu-group {
+    display: flex;
+    width: 100%;
+}
+.menu {
+    display: flex;
+    list-style: none;
+}
+.menu-right {
+    margin-left: auto;
+}
