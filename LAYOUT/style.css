@@ -186,18 +186,21 @@ header p {
 /* news */
 #news {
     padding-block: 150px;
+    background-color: #fffcd1;
+    clip-path: polygon(0 10%,100% 0, 100% 90%,0 100%);
 }
 #news h2 {
     font-size: 3rem;
     margin-bottom: 30px;
 }
 #news .wrapper {
-    border: 1px solid var(--dark);
+    border: 1px solid #9f9f9f;
     border-radius: 6px;
     overflow: hidden;
 }
 #news .content {
     padding: 20px;
+    background-color: #fff;
 }
 #news h3 {
     font-size: 1.5rem;
