@@ -185,9 +185,10 @@ header p {
 }
 /* news */
 #news {
-    padding-block: 150px;
-    background-color: #fffcd1;
-    clip-path: polygon(0 10%,100% 0, 100% 90%,0 100%);
+    padding-block-start: calc(150px + 10vw);
+    padding-block-end: calc(150px + 10vw);
+    background-color: #fff47d;
+    clip-path: polygon(0 0,100% 10vw, 100% calc(100% - 10vw),0 100%);
 }
 #news h2 {
     font-size: 3rem;
