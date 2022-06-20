@@ -183,3 +183,25 @@ header p {
     border-radius: 50%;
     border:3px solid #d1d1d1
 }
+/* news */
+#news {
+    padding-block: 150px;
+}
+#news h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+#news .wrapper {
+    border: 1px solid var(--dark);
+    border-radius: 6px;
+    overflow: hidden;
+}
+#news .content {
+    padding: 20px;
+}
+#news h3 {
+    font-size: 1.5rem;
+}
+#news p {
+    margin-block:15px
+}
