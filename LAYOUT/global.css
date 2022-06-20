@@ -4,6 +4,8 @@
     --blue: #0b74fd;
     --red: #ff3030;
     --yellow: #ffff65;
+    --light: #eee;
+    --dark: #222;
 }
 
 * {
@@ -22,29 +24,44 @@ a {
 .btn {
     display: inline-block;
     text-decoration: none;
-    color: #222;
     padding: 8px 25px;
     border-radius: 8px;
+    background-color: var(--btn-bg);
+    color: var(--btn-text);
+    transition:400ms
 }
 .btn-blue {
-    background-color: var(--blue);
-    color: #000;
-    transition: 400ms;
+    --btn-bg:var(--blue);
 }
 .btn-blue:hover {
-    background-color: #4c98fb;
+   --btn-bg: #a9ceff;
+}
+.btn-red {
+    --btn-bg: var(--red);
+}
+.btn-red:hover {
+    --btn-bg: #ff7171;
 }
 .btn-yellow {
-    background-color: var(--yellow);
+    --btn-bg: var(--yellow);
+}
+.btn-yellow:hover {
+    --btn-bg: #ffff99;
 }
 .btn-dark {
-    background-color: #222;
-    color: #eee;
+    --btn-bg: var(--dark);
+    --btn-text: var(--light);
+}
+.btn-dark:hover {
+    --btn-bg: #4b4b4b;
 }
 .btn-light {
-    background-color: #eee;
-    color: #222;
+    --btn-bg: var(--light);
 }
+.btn-light:hover {
+    --btn-bg: #bdbcbc;
+}
+
 
 /* text-align */
 .text-left {
