@@ -1,11 +1,38 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;400;900&display=swap');
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 body {
-    font-family: 'Ping Fang TC','微軟正黑體','sans-serif';
+    font-family:'poppins', 'Ping Fang TC','微軟正黑體','sans-serif';
 }
 a {
     text-decoration: none;
+}
+
+/* btn */
+.btn {
+    display: inline-block;
+    text-decoration: none;
+    color: #222;
+    padding: 8px 25px;
+    border-radius: 8px;
+}
+.btn-blue {
+    background-color: #0b74fd;
+    color: #000;
+    transition: 400ms;
+}
+.btn-blue:hover {
+    background-color: #4c98fb;
+}
+.btn-dark {
+    background-color: #222;
+    color: #eee;
+}
+.btn-light {
+    background-color: #eee;
+    color: #222;
 }
