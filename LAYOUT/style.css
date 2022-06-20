@@ -131,6 +131,10 @@ header .content {
 /* img 等比例 */
 header {
     position: relative;
+    clip-path: polygon(0 0,100% 0, 100% calc(100% - 10vw),0 100%);
+    margin-bottom: -10vw;
+    position: relative;
+    z-index: 100;
 }
 header img {
     width: 100%;
@@ -158,7 +162,12 @@ header p {
 }
 /* #about */
 #about {
-    padding-block: 150px
+    padding-block: calc(150px + 10vw);
+    clip-path: polygon(0 0,100% 0, 100% 100%,0 calc(100% - 10vw));
+    background-color: #fffac2;
+    position: relative;
+    z-index: 99;
+    margin-bottom: -10vw;
 }
 #about h2 {
     font-size: 3rem;
@@ -185,10 +194,10 @@ header p {
 }
 /* news */
 #news {
-    padding-block-start: calc(150px + 10vw);
-    padding-block-end: calc(150px + 10vw);
+    padding-block: calc(150px + 10vw);
     background-color: #fff47d;
-    clip-path: polygon(0 0,100% 10vw, 100% calc(100% - 10vw),0 100%);
+    clip-path: polygon(0 0,100% 0, 100% calc(100% - 10vw),0 100%);
+    z-index: 98;
 }
 #news h2 {
     font-size: 3rem;
