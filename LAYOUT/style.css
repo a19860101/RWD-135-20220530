@@ -160,3 +160,26 @@ header p {
 #about {
     padding-block: 150px
 }
+#about h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+#about h3 {
+    font-size: 2rem;
+    margin-block: 20px;
+}
+#about p {
+    margin-bottom: 20px;
+    line-height: 1.7;
+}
+#about .icon {
+    width: 100px;
+    height: 100px;
+    background-color: #feffa8;
+    margin-inline: auto;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border:3px solid #d1d1d1
+}
