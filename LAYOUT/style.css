@@ -47,10 +47,30 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+header .content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 600px;
+
+
+}
+header h1 {
+    font-size: 4rem;
+}
+header p {
+    font-size: 1.4rem;
 } */
 
 /* 背景等比例 */
-/* header {
+header {
     width: 100%;
     background-color: #098;
     background-image: url('http://picsum.photos/id/14/1600/1000');
@@ -58,7 +78,29 @@ nav {
     background-size: cover;
     background-repeat: no-repeat;
     background-position: center;
-} */
+    
+    display: flex;
+    justify-content: center;
+    position: relative;
+}
+header .content {
+    background-color: #fff;
+    padding: 30px;
+    border-radius: 15px;
+    text-align: center;
+    width: 600px;
+
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+
+}
+header h1 {
+    font-size: 4rem;
+}
+header p {
+    font-size: 1.4rem;
+}
 
 /* img 固定高度 */
 /* header {
@@ -73,6 +115,6 @@ header img {
 } */
 
 /* img 等比例 */
-header img {
+/* header img {
     width: 100%;
-}
+} */
