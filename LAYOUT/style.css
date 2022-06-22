@@ -280,5 +280,14 @@ header p {
     padding: 10px;
     border-radius: 5px;
     border: 1px solid #999;
+    /* border: 0; */
+    background-color: #cfcfcf;
     font-size: 16px;
+    outline: 0;
+    transition: 400ms;
+}
+.form-control:focus {
+    border: 1px solid #2885ff;
+    background-color: #ececec;
+
 }

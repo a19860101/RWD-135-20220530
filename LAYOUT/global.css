@@ -35,7 +35,6 @@ img {
     border:0;
     cursor: pointer;
     font-size: 16px;
-
 }
 .btn-blue {
     --btn-bg:var(--blue);
