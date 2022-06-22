@@ -5,6 +5,9 @@ nav {
     height: 60px;
     justify-content: center;
     align-items: center;
+    position: fixed;
+    width: 100%;
+    z-index: 999;
 }
 .logo {
     color: #ededed;
@@ -267,6 +270,7 @@ header p {
 /* #contact */
 #contact {
     padding-block: calc(150px + 10vw);
+    background-color: #fffdea;
 }
 #contact h2 {
     font-size: 3rem;
@@ -290,4 +294,11 @@ header p {
     border: 1px solid #2885ff;
     background-color: #fffde2;
 
+}
+/* footer */
+footer {
+    width: 100%;
+    background-color: var(--dark);
+    color: var(--light);
+    padding-block: 15px;
 }
