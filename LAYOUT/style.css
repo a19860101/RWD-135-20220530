@@ -198,6 +198,8 @@ header p {
     background-color: #fff47d;
     clip-path: polygon(0 0,100% 0, 100% calc(100% - 10vw),0 100%);
     z-index: 98;
+    position: relative;
+    margin-bottom: -10vw;
 }
 #news h2 {
     font-size: 3rem;
@@ -217,4 +219,17 @@ header p {
 }
 #news p {
     margin-block:15px
+}
+/* gallery   */
+#gallery {
+    padding-block: calc(150px + 10vw);
+    background-color: #fffac2;
+    clip-path: polygon(0 0,100% 0, 100% 100%,0 calc(100% - 10vw));
+    position: relative;
+    z-index: 97;
+    margin-bottom: -10vw;
+}
+#gallery h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
 }
