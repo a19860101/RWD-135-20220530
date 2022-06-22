@@ -264,3 +264,21 @@ header p {
 
 
 }
+/* #contact */
+#contact {
+    padding-block: calc(150px + 10vw);
+}
+#contact h2 {
+    font-size: 3rem;
+    margin-bottom: 30px;
+}
+.form-group {
+    margin-block-end: 15px;
+}
+.form-control {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #999;
+    font-size: 16px;
+}
