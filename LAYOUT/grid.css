@@ -55,3 +55,6 @@
     *= 包含
     $= 結尾
 */
+.no-gutters > [class^='col'] {
+    padding: 0;
+}
