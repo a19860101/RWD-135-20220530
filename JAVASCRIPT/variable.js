@@ -35,3 +35,21 @@ console.log(q);
 
 */
 
+// 資料型別
+/* 
+    數值 Number
+    字串 String
+    布林 Boolean(true, false)
+
+    未定義 Undefined
+    空值 Null
+
+    陣列 Array
+    物件 Object
+
+    函式 Function
+    符號 Symbol
+*/
+
+let qq = null;
+console.log(typeof(qq));
