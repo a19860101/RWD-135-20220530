@@ -1,3 +1,10 @@
+/* 
+中斷點
+520 sm
+720 md
+960 lg
+1200 xl
+*/
 .container {
     width: 100%;
     margin-inline: auto;
@@ -68,13 +75,7 @@
 .align-items-start {align-items: flex-start;}
 .align-items-end {align-items: flex-end;}
 .align-items-center {align-items: center;}
-/* 
-中斷點
-520 sm
-720 md
-960 lg
-1200 xl
-*/
+
 @media(min-width: 520px){
     .container {
         width: 520px;
