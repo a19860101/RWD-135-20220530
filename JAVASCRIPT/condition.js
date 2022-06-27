@@ -1,7 +1,7 @@
 //條件式
 
 // if...
-let x = -10;
+let x = 0;
 if(x > 0){
     console.log('success');
 }
@@ -27,4 +27,20 @@ if(x > 0){
     console.log('負');
 }else{
     console.log(0)
+}
+
+//switch
+
+switch(x){
+    case 0:
+        console.log(0);
+        break;
+    case 1:
+        console.log(1);
+        break;
+    case 2:
+        console.log(2);
+        break ;
+    default: 
+        console.log('default');   
 }
