@@ -19,3 +19,11 @@ let myDrinks = drinks.slice(0,1);
 
 console.log(drinks);
 console.log(myDrinks);
+
+// join() 陣列->字串
+let drink_join = drinks.join('!!');
+console.log(drink_join);
+
+// toString() 陣列->字串
+let drink_str = drinks.toString('_');
+console.log(drink_str)
