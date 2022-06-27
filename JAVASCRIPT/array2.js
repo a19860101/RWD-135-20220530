@@ -40,4 +40,4 @@ console.log(myArray.sort())
 console.log(myArray.sort().reverse());
 
 let s = 'hello';
-console.log(s.split('').reverse().join())
+console.log(s.split('').reverse().join(''))
