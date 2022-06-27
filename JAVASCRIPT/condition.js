@@ -1,7 +1,7 @@
 //條件式
 
 // if...
-let x = 0;
+let x = 'asdf';
 if(x > 0){
     console.log('success');
 }
@@ -41,6 +41,19 @@ switch(x){
     case 2:
         console.log(2);
         break ;
+    case 'error':
+        console.log('error!!!');
+        break;
     default: 
         console.log('default');   
+}
+switch(true){
+    case x > 0:
+        console.log('大');
+        break;
+    case x < 0:
+        console.log('小');
+        break;
+    default:
+        console.log('!!')
 }
