@@ -9,4 +9,13 @@ drinks.pop();
 drinks.unshift('可樂');
 drinks.shift();
 
+// splice() 拼接
+// drinks.splice(1,0,'雪碧','黑松沙士')
+// drinks.splice(1,1,'雪碧','黑松沙士')
+// drinks.splice(2,1);
+
+//slice() 切片
+let myDrinks = drinks.slice(0,1); 
+
 console.log(drinks);
+console.log(myDrinks);
