@@ -23,22 +23,22 @@ let drinks = [
         price: 20
     },
     {
-        id: 1,
+        id: 2,
         name: '綠茶',
         price: 20
     },
     {
-        id: 1,
+        id: 3,
         name: '奶茶',
         price: 30
     },
     {
-        id: 1,
+        id: 4,
         name: '珍珠奶茶',
         price: 50
     },
     {
-        id: 1,
+        id: 5,
         name: '拿鐵',
         price: 70
     },
@@ -46,8 +46,8 @@ let drinks = [
 
 //foreach
 users.forEach(function(data){
-    console.log(data.mail);
-    console.log(data.name);
+    // console.log(data.mail);
+    // console.log(data.name);
 })
 
 //map
@@ -58,4 +58,18 @@ let drinkPrice = drinks.map(function(data){
     return data.price;
 })
 
-console.log(drinkPrice);
+// console.log(drinkPrice);
+
+// filter
+let cheap = drinks.filter(function(data){
+    return data.price <= 30
+})
+let bubble = drinks.filter(function(data){
+    return data.name == '珍珠奶茶';
+})
+
+drinks = drinks.filter(function(data){
+    return data.name != '綠茶';
+})
+
+console.log(drinks);
