@@ -73,3 +73,25 @@ drinks = drinks.filter(function(data){
 })
 
 console.log(drinks);
+
+// includes()
+
+console.log(drinkName);
+// let result = drinkName.includes('珍珠奶茶');
+let result = drinkName.includes('摩卡');
+console.log(result);
+
+// reduce()
+console.log(drinkPrice)
+let total = drinkPrice.reduce(function(a,b){
+    // return a;
+    console.log(b)
+})
+console.log(total);
+/* 
+    a:20 b:20
+    a:40 b:30
+    a:70 b:50
+    a:120 b:70
+    a:190 b:undefined
+*/
