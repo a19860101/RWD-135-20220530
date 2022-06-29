@@ -1,4 +1,5 @@
-// 函式宣告式 Function declaration
+
+// 函式宣告式 Function declaration (提升性)
 function test(){
     let x = 100;
     // console.log(x);
@@ -10,4 +11,15 @@ let test2 = function(){
     let y = 999;
     return y;
 }
-console.log(test2());
+
+function square(w,h){
+    return w*h;
+}
+
+console.log(square(200,128));
+console.log(square());
+
+function go(x){
+    return x;
+}
+console.log(go())
