@@ -23,6 +23,7 @@
             text-decoration: none;
             color: #eee;
             padding: 10px 20px;
+            transition: 400ms;
         }
         .tab-link.active {
             background-color: #fff8c4;
@@ -83,6 +84,9 @@
                 console.log(href);
                 document.querySelector('.tab-panel.active').classList.remove('active');
                 document.querySelector(href).classList.add('active');
+
+                document.querySelector('.tab-link.active').classList.remove('active');
+                this.classList.add('active');
             }
         }
     </script>
