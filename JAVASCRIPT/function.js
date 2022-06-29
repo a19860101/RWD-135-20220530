@@ -23,3 +23,32 @@ function go(x){
     return x;
 }
 console.log(go())
+
+// 箭頭函式 arrow function
+
+// function asdf(){
+//     return 'asdf';
+// }
+
+// let asdf = ()=>{
+//     return 'asdf';
+// }
+
+// 如果大括號內只有return，則大括號跟return皆可省略
+// let asdf = () => 'asdf';
+
+// 如果只有一個參數，則小括號可以省略
+// let asdf = x => {return x};
+// let asdf = x => x;
+
+// let asdf = (x,y) => x + y;
+// let asdf = function(x,y){
+//     return x+y;
+// }
+
+// let asdf = function(){
+//     return this;
+// }
+let asdf = () => this;
+
+console.log(asdf(123,234));
