@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        .tab {
+            width: 600px;
+            margin-inline: auto;
+        }
+        .tab-nav {
+            display: flex;
+            background-color: #222;
+        }
+        .tab-link {
+            text-decoration: none;
+            color: #eee;
+            padding: 10px 20px;
+        }
+        .tab-link.active {
+            background-color: #fff8c4;
+            color: #000;
+        }
+        .tab-panel {
+            padding: 10px;
+            background-color: #fff8c4;
+            color: #222;
+            display: none;
+        }
+        .tab-panel.active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="tab">
+        <div class="tab-nav">
+            <a href="#" class="tab-link active">tab 1</a>
+            <a href="#" class="tab-link">tab 2</a>
+            <a href="#" class="tab-link">tab 3</a>
+            <a href="#" class="tab-link">tab 4</a>
+        </div>
+        <div class="tab-panel active" id="tab-1">
+            <h3>tab 1</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-2">
+            <h3>tab 2</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-3">
+            <h3>tab 3</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+            </p>
+        </div>
+        <div class="tab-panel" id="tab-4">
+            <h3>tab 4</h3>
+            <p>
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+                Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iusto facilis ullam omnis, suscipit ipsam vitae, eum sequi sed odit doloremque officiis fuga quae porro eligendi sunt iure ratione qui voluptates!
+            </p>
+        </div>
+    </div>
+</body>
+</html>
