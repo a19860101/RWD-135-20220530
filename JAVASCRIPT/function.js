@@ -49,6 +49,20 @@ console.log(go())
 // let asdf = function(){
 //     return this;
 // }
-let asdf = () => this;
+// let asdf = () => this;
 
-console.log(asdf(123,234));
+// console.log(asdf(123,234));
+
+let obj = {
+    name:'test',
+    active:function(){
+        return this;
+    }
+}
+let obj2 = {
+    name:'test2',
+    active:() => {
+        return this;
+    }
+}
+console.log(obj2.active());
