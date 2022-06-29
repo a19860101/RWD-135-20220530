@@ -14,10 +14,13 @@
         .tab {
             width: 600px;
             margin-inline: auto;
+            position: relative;
         }
         .tab-nav {
             display: flex;
             background-color: #222;
+            position: relative;
+            z-index: 10;
         }
         .tab-link {
             text-decoration: none;
@@ -33,10 +36,23 @@
             padding: 10px;
             background-color: #fff8c4;
             color: #222;
-            display: none;
+            /* display: none; */
+            position: absolute;
+            opacity: 0;
+            transition: 400ms;
+            visibility: hidden;
+            transform: translateY(-10%);
         }
         .tab-panel.active {
-            display: block;
+            /* display: block; */
+            /* animation: fadeIn 800ms; */
+            opacity: 1;
+            visibility: visible;
+            transform: translateY(0%);
+
+        }
+        @keyframes fadeIn {
+            from {opacity: 0;}
         }
     </style>
 </head>
