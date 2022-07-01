@@ -63,5 +63,15 @@
             </div>
         </div>
     </div>
+    <script>
+        let modalBtns = document.querySelectorAll('.modal-btn');
+        for(modalBtn of modalBtns){
+            modalBtn.onclick = e => {
+                let modal = e.target.dataset.target;
+                document.querySelector(modal).classList.add('active');
+            }
+        }
+
+    </script>
 </body>
 </html>
