@@ -20,12 +20,13 @@
         }
         .gallery-img {
             width: 100px;
+            cursor: pointer;
         }
     </style>
 </head>
 <body>
     <div class="gallery">
-        <img src="images/5648101_500.jpg" alt="">
+        <img src="images/5648101_500.jpg" class="picture">
         <div class="gallery-items">
             <img src="images/5648101_500.jpg" class="gallery-img">
             <img src="images/5648102_500.jpg" class="gallery-img">
@@ -35,5 +36,14 @@
             <img src="images/5648106_500.jpg" class="gallery-img">
         </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.gallery-img');
+        for(img of imgs){
+            img.onclick = e => {
+                let src = e.target.getAttribute('src');
+                document.querySelector('.picture').setAttribute('src',src);
+            }
+        }
+    </script>
 </body>
 </html>
