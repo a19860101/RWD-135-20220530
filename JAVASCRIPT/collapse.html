@@ -6,27 +6,47 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     <style>
+        * {
+            box-sizing: border-box;
+        }
         .collapse-panel {
             width: 200px;
             background-color: #ccc;
 
-            visibility: hidden;
-            opacity: 0;
+            /* visibility: hidden; */
             
+            opacity: 0;
+            height: 0;
+            overflow: hidden;
+            box-sizing: content-box;
+            padding-inline: 15px;
+
             transition: 300ms;
         }
         .collapse-panel.active {
-            background-color: #098;
+            /* background-color: #098; */
 
-            visibility: visible;
+            /* visibility: visible; */
+            
             opacity: 1;
+            padding-block: 15px;
         }
     </style>
 </head>
 <body>
-    <a href="#" data-target="#collapse-1" class="collapse-btn">click</a>
+    <a href="#" data-target="#collapse-1" class="collapse-btn">click 1</a>
     <div class="collapse-panel" id="collapse-1">
         <h2>title</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dicta similique provident impedit autem? Cum suscipit aliquam at! Impedit, ipsa excepturi modi neque fuga velit! Natus quae ullam exercitationem necessitatibus.
+        </p>
+    </div>
+    <a href="#" data-target="#collapse-2" class="collapse-btn">click 2</a>
+    <div class="collapse-panel" id="collapse-2">
+        <h2>title 2</h2>
+        <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dicta similique provident impedit autem? Cum suscipit aliquam at! Impedit, ipsa excepturi modi neque fuga velit! Natus quae ullam exercitationem necessitatibus.
+        </p>
         <p>
             Lorem ipsum dolor sit amet consectetur adipisicing elit. Facilis dicta similique provident impedit autem? Cum suscipit aliquam at! Impedit, ipsa excepturi modi neque fuga velit! Natus quae ullam exercitationem necessitatibus.
         </p>
@@ -36,8 +56,13 @@
         for(collapseBtn of collapseBtns){
             collapseBtn.onclick = e => {
                 let panel = e.target.nextElementSibling;
-                console.log(panel);
                 panel.classList.toggle('active');
+
+                if(panel.style.height){
+                    panel.style.height = null;
+                }else{
+                    panel.style.height = panel.scrollHeight + 'px';
+                }
             }
         }
     </script>
