@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">hello Javascript</h1>
+        <p class="slogan">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, placeat.</p>
+        <ul>
+            <li class="list"><a href="#">list 1</a></li>
+            <li class="list"><a href="#">list 2</a></li>
+            <li class="list"><a href="#">list 3</a></li>
+            <li class="list"><a href="#">list 4</a></li>
+            <li class="list"><a href="#">list 5</a></li>
+            <li class="list"><a href="#">list 6</a></li>
+        </ul>
+        <div class="content">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempore voluptatem obcaecati architecto omnis ipsa, provident, necessitatibus quae repellat earum fugiat ipsam impedit eaque optio a esse sapiente iste eum.
+            </p>
+        </div>
+    </div>
+    <script>
+        let el = document.querySelector('ul');
+        // 父元素
+        console.log(el.parentElement);
+        // 父節點
+        console.log(el.parentNode);
+
+        // 同輩元素
+        console.log(el.nextElementSibling);
+        console.log(el.previousElementSibling);
+        
+        // 同輩節點
+        console.log(el.nextSibling);
+        console.log(el.previousSibling);
+        /* 
+            節點
+            元素節點
+            文字節點
+            註解節點
+        */
+    </script>
+</body>
+</html>
