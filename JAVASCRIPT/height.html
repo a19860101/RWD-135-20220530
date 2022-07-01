@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        .box {
+            width: 200px;
+            height: 200px;
+            background-color: #098;
+            border:10px solid #f00;
+            padding-top:50px;
+
+            overflow: hidden;
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis nesciunt velit, sit aut ut dolor officia magni amet odio quis earum laudantium saepe modi unde ullam voluptatibus. Eos, aut perferendis?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis nesciunt velit, sit aut ut dolor officia magni amet odio quis earum laudantium saepe modi unde ullam voluptatibus. Eos, aut perferendis?
+        Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis nesciunt velit, sit aut ut dolor officia magni amet odio quis earum laudantium saepe modi unde ullam voluptatibus. Eos, aut perferendis?
+    </div>
+    <script>
+        let box = document.querySelector('.box');
+
+        console.log('clientHeight',box.clientHeight);
+        // height + padding
+        
+        console.log('offsetHeight',box.offsetHeight);
+        // height + padding + border
+
+        console.log('scrollHeight',box.scrollHeight);
+        // height + padding + overflow
+        </script>
+</body>
+</html>
