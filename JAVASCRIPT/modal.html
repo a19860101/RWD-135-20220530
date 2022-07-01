@@ -26,6 +26,9 @@
             top: 0;
             left: 0;
         }
+        .modal.active .modal-overlay {
+            animation: fadeIn 1s;
+        }
         .modal-container {
             max-width: 750px;
             width: 60%;
@@ -36,12 +39,24 @@
             left: 50%;
             top: 50%;
             transform: translate(-50%,-50%);
+            opacity: 0;
         }
-
+        .modal.active  .modal-container {
+            animation: fadeIn 1s .4s forwards;
+        }
+        @keyframes fadeIn{
+            from {
+                opacity: 0;
+            }
+            to {
+                opacity: 1;
+            }
+        }
     </style>
 </head>
 <body>
     <a href="#" class="modal-btn" data-target="#modal-1">Modal 1</a>
+    <a href="#" class="modal-btn" data-target="#modal-2">Modal 2</a>
     <div id="modal-1" class="modal">
         <div class="modal-overlay modal-close"></div>
         <div class="modal-container">
@@ -50,6 +65,33 @@
             </div>
             <hr>
             <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum consequatur debitis. Hic voluptates eveniet nam, inventore quaerat esse, quibusdam eum cumque perferendis fugiat aspernatur unde nemo, doloribus consequuntur ex.
+                </p>
+                <p>
+                    Lorem ipsum, dolor sit amet consectetur adipisicing elit. Assumenda nemo recusandae amet ducimus enim praesentium cum quibusdam officiis fugiat exercitationem, animi, quis iusto magni possimus rerum! Reiciendis laudantium atque quis.
+                </p>
+            </div>
+            <hr>
+            <div class="modal-footer">
+                <a href="#" class="modal-close">Close</a>
+            </div>
+        </div>
+    </div>
+    <div id="modal-2" class="modal">
+        <div class="modal-overlay modal-close"></div>
+        <div class="modal-container">
+            <div class="modal-header">
+                <h3>Modal 2</h3>
+            </div>
+            <hr>
+            <div class="modal-body">
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum consequatur debitis. Hic voluptates eveniet nam, inventore quaerat esse, quibusdam eum cumque perferendis fugiat aspernatur unde nemo, doloribus consequuntur ex.
+                </p>
+                <p>
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum consequatur debitis. Hic voluptates eveniet nam, inventore quaerat esse, quibusdam eum cumque perferendis fugiat aspernatur unde nemo, doloribus consequuntur ex.
+                </p>
                 <p>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Ex dolorum consequatur debitis. Hic voluptates eveniet nam, inventore quaerat esse, quibusdam eum cumque perferendis fugiat aspernatur unde nemo, doloribus consequuntur ex.
                 </p>
