@@ -84,7 +84,7 @@ console.log(result);
 // reduce()
 console.log(drinkPrice)
 let total = drinkPrice.reduce(function(a,b){
-    // return a;
+    return a + b;
     console.log(b)
 })
 console.log(total);
