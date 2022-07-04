@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI';
+        }
+        .slider {
+            width: 1200px;
+            margin-inline: auto;
+            position: relative;
+        }
+        img {
+            vertical-align: top;
+            width: 100%;
+        }
+        .slider-wrapper {
+            display: flex;
+            width: 6000px;
+        }
+        .slider-item {
+            width: 1200px;
+            position: relative;
+        }
+        .slider-caption {
+            position: absolute;
+            width: 100%;
+            background-color: rgb(0 0 0 / .7);
+            color: #fff;
+            bottom: 0;
+            text-align: center;
+            padding-block: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div class="slider">
+        <div class="slider-wrapper">
+            <div class="slider-item active">
+                <img src="https://picsum.photos/1200/600?random=1" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 1</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tenetur!</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/1200/600?random=2" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 2</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tenetur!</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/1200/600?random=3" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 3</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tenetur!</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/1200/600?random=4" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 4</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tenetur!</p>
+                </div>
+            </div>
+            <div class="slider-item">
+                <img src="https://picsum.photos/1200/600?random=5" alt="">
+                <div class="slider-caption">
+                    <h4>Photo 5</h4>
+                    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad, tenetur!</p>
+                </div>
+            </div>
+        </div>
+        <div class="slider-nav">
+            <a href="#" class="slider-prev"><i class="fa-solid fa-circle-chevron-left fa-2x"></i></a>
+            <a href="#" class="slider-next"><i class="fa-solid fa-circle-chevron-right fa-2x"></i></a>
+        </div>
+    </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
+
+        next.onclick = () => {slider()}
+        prev.onclick = () => {slider('prev')}
+
+        function slider(direction){
+            console.log(currentIndex);
+            // if(currentIndex == total - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+            
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex-1) % total;
+            }else{
+                currentIndex = (currentIndex+1) % total;
+            }
+
+
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
+        }
+
+        setInterval(slider,3000);
+
+    </script>
+</body>
+</html>
