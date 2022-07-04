@@ -8,17 +8,24 @@
 </head>
 <body>
     <script>
-        let url = 'data.json';
+        let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
         fetch(url)
-        .then(function(response){
-            return response.json()
+        .then(response => response.json())
+        .then(data => {
+            // console.log(data);
+            const variety = data.map(a => a.animal_Variety);
+            const file = data.map(a => a.aniaml_file);
+            const place = data.map(a => a.animal_place);
+            console.log(place);
         })
-        .then(function(data){
-            console.log(data.books);
-            data.books.forEach(function(book){
-                console.log(book.name)
-            })
-        })
+        // fetch(url)
+        // .then(function(response){
+        //     return response.json()
+        // })
+        // .then(function(data){
+        //     console.log(data);
+           
+        // })
     </script>
 </body>
 </html>
