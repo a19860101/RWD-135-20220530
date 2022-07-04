@@ -5,18 +5,51 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .container {
+            width: 1200px;
+            margin-inline: auto;
+            display: flex;
+            flex-wrap: wrap;
+        }
+        img {
+            width: 100%;
+        }
+        .box {
+            flex: 0 0 25%
+        }
+    </style>
 </head>
 <body>
+    <div class="container">
+
+    </div>
     <script>
-        let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL';
+        let url = 'https://data.coa.gov.tw/Service/OpenData/TransService.aspx?UnitId=QcbUEzN6E6DL&$top=10&$skip=0&animal_kind=貓';
         fetch(url)
         .then(response => response.json())
         .then(data => {
-            // console.log(data);
+            console.log(data);
             const variety = data.map(a => a.animal_Variety);
-            const file = data.map(a => a.aniaml_file);
-            const place = data.map(a => a.animal_place);
-            console.log(place);
+            let container = document.querySelector('.container');
+            data.forEach(a => {
+                let box = document.createElement('div');;
+                box.className = 'box';
+
+                let place = document.createElement('div');
+                place.className = 'place';
+                place.append(a.animal_place);
+                
+                let file = document.createElement('img');
+                file.className = 'img';
+                file.setAttribute('src',a.album_file);
+
+                
+
+                box.append(file,place);
+                container.append(box);
+            })
+
         })
         // fetch(url)
         // .then(function(response){
