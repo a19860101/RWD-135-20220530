@@ -17,6 +17,8 @@
             width: 1200px;
             margin-inline: auto;
             position: relative;
+
+            overflow: hidden;
         }
         img {
             vertical-align: top;
@@ -24,7 +26,7 @@
         }
         .slider-wrapper {
             display: flex;
-            width: 6000px;
+            transition: 600ms;
         }
         .slider-item {
             width: 1200px;
@@ -91,18 +93,17 @@
         let currentIndex = 0;
         let next = document.querySelector('.slider-next');
         let prev = document.querySelector('.slider-prev');
+        let imgWidth = 1200;
+        let wrapperWidth = total * imgWidth;
+        let wrapper = document.querySelector('.slider-wrapper');
+        wrapper.style.width = wrapperWidth + 'px';
+
 
         next.onclick = () => {slider()}
         prev.onclick = () => {slider('prev')}
 
         function slider(direction){
             console.log(currentIndex);
-            // if(currentIndex == total - 1){
-            //     currentIndex = 0;
-            // }else{
-            //     currentIndex++;
-            // }
-            
             if(direction === 'prev'){
                 currentIndex = currentIndex === 0 ? total : currentIndex;
                 currentIndex = (currentIndex-1) % total;
@@ -110,9 +111,7 @@
                 currentIndex = (currentIndex+1) % total;
             }
 
-
-            document.querySelector('.slider-item.active').classList.remove('active');
-            imgs[currentIndex].classList.add('active');
+            wrapper.style.marginLeft = -(imgWidth * currentIndex) + 'px';
         }
 
         setInterval(slider,3000);
