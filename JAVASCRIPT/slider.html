@@ -40,6 +40,18 @@
         .slider-item.active {
             opacity: 1;
         }
+        .slider-nav {
+            width: 100%;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            top: 300px;
+            transform: translateY(-50%);
+            padding-inline: 10px
+        }
+        .slider-nav a {
+            color: #fff;
+        }
     </style>
 </head>
 <body>
@@ -80,23 +92,36 @@
             </div>
         </div>
         <div class="slider-nav">
-            <a href="#" class="slider-prev"><i class="fa-solid fa-circle-chevron-left"></i></a>
-            <a href="#" class="slider-next"><i class="fa-solid fa-circle-chevron-right"></i></a>
+            <a href="#" class="slider-prev"><i class="fa-solid fa-circle-chevron-left fa-2x"></i></a>
+            <a href="#" class="slider-next"><i class="fa-solid fa-circle-chevron-right fa-2x"></i></a>
         </div>
     </div>
     <script>
         let imgs = document.querySelectorAll('.slider-item');
         let total = imgs.length;
         let currentIndex = 0;
+        let next = document.querySelector('.slider-next');
+        let prev = document.querySelector('.slider-prev');
 
-        function slider(){
+        next.onclick = () => {slider()}
+        prev.onclick = () => {slider('prev')}
+
+        function slider(direction){
             console.log(currentIndex);
             // if(currentIndex == total - 1){
             //     currentIndex = 0;
             // }else{
             //     currentIndex++;
             // }
-            currentIndex = (currentIndex+1) % total;
+            
+            if(direction === 'prev'){
+                currentIndex = currentIndex === 0 ? total : currentIndex;
+                currentIndex = (currentIndex-1) % total;
+            }else{
+                currentIndex = (currentIndex+1) % total;
+            }
+
+
             document.querySelector('.slider-item.active').classList.remove('active');
             imgs[currentIndex].classList.add('active');
         }
