@@ -39,5 +39,25 @@
             <img src="https://picsum.photos/1200/600?random=5" alt="">
         </div>
     </div>
+    <script>
+        let imgs = document.querySelectorAll('.slider-item');
+        let total = imgs.length;
+        let currentIndex = 0;
+
+        function slider(){
+            console.log(currentIndex);
+            // if(currentIndex == total - 1){
+            //     currentIndex = 0;
+            // }else{
+            //     currentIndex++;
+            // }
+            currentIndex = (currentIndex+1) % total;
+            document.querySelector('.slider-item.active').classList.remove('active');
+            imgs[currentIndex].classList.add('active');
+        }
+
+        setInterval(slider,1000);
+
+    </script>
 </body>
 </html>
