@@ -1,5 +1,9 @@
 .nav-toggle {
     display: block;
+    position: absolute;
+    right: 15px;
+    top: 10px;
+    color: #ededed;
 }
 nav {
     display: block;
