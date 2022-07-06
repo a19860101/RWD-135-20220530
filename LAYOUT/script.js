@@ -31,3 +31,17 @@ for(collapseBtn of collapseBtns){
         }
     }
 }
+
+// 取得視窗寬度
+
+let bodyWidth = document.body.clientWidth;
+let htmlWidth = document.documentElement.clientWidth;
+console.log(bodyWidth);
+console.log(htmlWidth);
+// let windowWidth = window.innerWidth;
+// console.log(windowWidth);
+
+window.onresize = e => {
+    let windowWidth = window.innerWidth;
+    console.log(windowWidth);
+}
