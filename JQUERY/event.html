@@ -5,9 +5,22 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <style>
+        .panel {
+            transition: 500ms;
+        }
+        .panel.active {
+            background-color: rgb(202, 201, 201);
+            color: #00332d;
+            padding: 20px;
+            border-radius: 5px;
+        }
+    </style>
 </head>
 <body>
-    <a href="#" class="add">link</a>
+    <a href="#" class="add">Add</a>
+    <a href="#" class="remove">Remove</a>
+    <a href="#" class="toggle">Toggle</a>
     <div class="panel">
         <h2>title</h2>
         <p>
@@ -18,15 +31,19 @@
     <script>
         $(function(){
             $('.add').click(function(){
-                $('.panel').css({
-                    color:'red'
-                })
+                $('.panel').addClass('active');
             });
+            $('.remove').click(function(){
+                $('.panel').removeClass('active');
+            })
+            $('.toggle').click(function(){
+                $('.panel').toggleClass('active');
+            })
         })
-        let add = document.querySelector('.add');
-        add.onclick = e=>{
-            document.querySelector('.panel').style.color = 'red';
-        }
+        // let add = document.querySelector('.add');
+        // add.onclick = e=>{
+        //     document.querySelector('.panel').style.color = 'red';
+        // }
     </script>
 </body>
 </html>
