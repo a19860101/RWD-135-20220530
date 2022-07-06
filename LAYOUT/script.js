@@ -43,5 +43,13 @@ console.log(htmlWidth);
 
 window.onresize = e => {
     let windowWidth = window.innerWidth;
-    console.log(windowWidth);
+    let menu = document.querySelector('.menu-group');
+    // console.log(windowWidth);
+    if(windowWidth > 720){
+        menu.style.height = 'initial';
+        menu.style.overflow = 'initial';
+    }else{
+        menu.style.height = 0;
+        menu.style.overflow = 'hidden';
+    }
 }
