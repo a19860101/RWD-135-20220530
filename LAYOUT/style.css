@@ -26,7 +26,10 @@ nav {
 }
 .menu-group {
     /* display: block; */
-    display: none;
+    /* display: none; */
+    height: 0;
+    overflow: hidden;
+    transition: 600ms;
 
     width: 100%;
 }
@@ -61,6 +64,9 @@ nav {
     }
     .menu-group {
         display: flex;
+        height: initial;
+        overflow: initial;
+        transition: 600ms;
     }
     .menu {
         display: flex;

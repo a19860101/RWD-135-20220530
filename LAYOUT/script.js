@@ -15,3 +15,19 @@ for(c of close){
         e.preventDefault();
     }
 }
+
+// collapse (nav-toggle)
+let collapseBtns = document.querySelectorAll('.collapse-btn');
+for(collapseBtn of collapseBtns){
+    collapseBtn.onclick = e => {
+        let panel = e.target.nextElementSibling;
+        console.log(e.target);
+        panel.classList.toggle('active');
+
+        if(panel.style.height){
+            panel.style.height = null;
+        }else{
+            panel.style.height = panel.scrollHeight + 'px';
+        }
+    }
+}
