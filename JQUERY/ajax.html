@@ -8,6 +8,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+    <div class="container">
+    </div>
     <script>
         //b1ecbccd638b763d489602917ba47cc3
         $(function(){
@@ -22,6 +24,13 @@
                 },
                 success(data){
                     console.log(data);
+                    let desc = `<div class="desc">現在天氣 ${data.weather[0].description}</div?`;
+                    let feels_like = `<div class="feels_like">體感溫度:${data.main.feels_like}&deg;C</div>`;
+                    let temp = `<div class="temp">氣溫:${data.main.temp}&deg;C</div>`;
+                    let max = `<div class="max">最高溫:${data.main.temp_max}&deg;C</div>`;
+                    let min = `<div class="min">最低溫:${data.main.temp_min}&deg;C</div>`;
+                    let humidity = `<div class="humidity">濕度:${data.main.humidity}%</div>`
+                    $('.container').append(desc,feels_like,temp,max,min,humidity)
                 },
                 error(){
                     console.log('error');
