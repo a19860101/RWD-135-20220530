@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
     <style>
         * {
@@ -23,12 +24,22 @@
             border-bottom:1px solid #918f5a;
             transition: 600ms;
             cursor: pointer;
+
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
         }
         .collapse-btn:hover {
             background-color: #9ad0ff;
         }
         .collapse-btn.active {
             background-color: #9ad0ff;
+        }
+        .collapse-btn i {
+            transition: 600ms;
+        }
+        .collapse-btn.active i {
+            transform: rotate(225deg);
         }
         .collapse-panel {
             background-color: #fffdce;
@@ -40,28 +51,37 @@
 </head>
 <body>
     <div class="collapse">
-        <h3 class="collapse-btn">title</h3>
+        <h3 class="collapse-btn">
+            title
+            <i class="fa-solid fa-plus fa-lg"></i>
+        </h3>
         <div class="collapse-panel">
             <h4>title</h4>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus numquam veniam officia? Quia, molestiae. Itaque, velit! Repellat perspiciatis, officiis pariatur veniam maiores consequatur id officia ut tenetur corrupti enim doloremque!
             </p>
         </div>
-        <h3 class="collapse-btn">title 1</h3>
+        <h3 class="collapse-btn">title 1
+            <i class="fa-solid fa-plus fa-lg"></i>
+        </h3>
         <div class="collapse-panel">
             <h4>title</h4>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus numquam veniam officia? Quia, molestiae. Itaque, velit! Repellat perspiciatis, officiis pariatur veniam maiores consequatur id officia ut tenetur corrupti enim doloremque!
             </p>
         </div>
-        <h3 class="collapse-btn">title 2</h3>
+        <h3 class="collapse-btn">title 2
+            <i class="fa-solid fa-plus fa-lg"></i>
+        </h3>
         <div class="collapse-panel">
             <h4>title</h4>
             <p>
                 Lorem ipsum dolor sit amet consectetur adipisicing elit. Necessitatibus numquam veniam officia? Quia, molestiae. Itaque, velit! Repellat perspiciatis, officiis pariatur veniam maiores consequatur id officia ut tenetur corrupti enim doloremque!
             </p>
         </div>
-        <h3 class="collapse-btn">title 3</h3>
+        <h3 class="collapse-btn">title 3
+            <i class="fa-solid fa-plus fa-lg"></i>
+        </h3>
         <div class="collapse-panel">
             <h4>title</h4>
             <p>
