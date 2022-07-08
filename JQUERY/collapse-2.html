@@ -27,6 +27,9 @@
         .collapse-btn:hover {
             background-color: #9ad0ff;
         }
+        .collapse-btn.active {
+            background-color: #9ad0ff;
+        }
         .collapse-panel {
             background-color: #fffdce;
             padding: 12px;
@@ -66,5 +69,13 @@
             </p>
         </div>
     </div>
+    <script>
+        $(function(){
+            $('.collapse-btn').click(function(){
+                $(this).next().slideToggle();
+                $(this).toggleClass('active');
+            })
+        })
+    </script>
 </body>
 </html>
