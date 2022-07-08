@@ -30,17 +30,26 @@
         $(function(){
             let el = $('.slogan');
             // 父層
-            console.log(el.parent());
-            console.log(el.parents());
-            console.log(el.parents('html'));
-            console.log($('.list').parents('.container'));
-            
-            console.log(el.closest('.container'));
+            // console.log(el.parent());
+            // 長輩
+            // console.log(el.parents());
+            // console.log(el.parents('html'));
+            // console.log($('.list').parents('.container'));
+
+            // console.log(el.closest('.container'));
 
             //同輩
-            console.log(el.next());
-            console.log(el.prev());
-            console.log($('.list').eq(3).css({color:'red'}));
+            // console.log(el.next());
+            // console.log(el.prev());
+            // console.log($('.list').eq(3).css({color:'red'}));
+
+            //子輩
+            let ul = $('ul');
+            console.log(ul.children());
+            console.log($('.container').children());
+            console.log($('.container').children('.content'));
+            // 後輩
+            console.log(ul.find('a'))
         })
     </script>
 </body>
