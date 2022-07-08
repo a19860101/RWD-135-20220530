@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1 id="title">hello Javascript</h1>
+        <p class="slogan">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Debitis, placeat.</p>
+        <ul>
+            <li class="list"><a href="#">list 1</a></li>
+            <li class="list"><a href="#">list 2</a></li>
+            <li class="list"><a href="#">list 3</a></li>
+            <li class="list"><a href="#">list 4</a></li>
+            <li class="list"><a href="#">list 5</a></li>
+            <li class="list"><a href="#">list 6</a></li>
+        </ul>
+        <div class="content">
+            <h2>title</h2>
+            <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Repellendus tempore voluptatem obcaecati architecto omnis ipsa, provident, necessitatibus quae repellat earum fugiat ipsam impedit eaque optio a esse sapiente iste eum.
+            </p>
+        </div>
+    </div>
+    <script>
+        $(function(){
+            let el = $('.slogan');
+            // 父層
+            console.log(el.parent());
+            console.log(el.parents());
+            console.log(el.parents('html'));
+            console.log($('.list').parents('.container'));
+            
+            console.log(el.closest('.container'));
+
+            //同輩
+            console.log(el.next());
+            console.log(el.prev());
+            console.log($('.list').eq(3).css({color:'red'}));
+        })
+    </script>
+</body>
+</html>
