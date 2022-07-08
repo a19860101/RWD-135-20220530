@@ -24,13 +24,24 @@
                 },
                 success(data){
                     console.log(data);
+                    let myDate = new Date(data.dt*1000);
+                    let year = myDate.getFullYear();
+                    let month = myDate.getMonth()+1;
+                    let date = myDate.getDate();
+                    let day = myDate.getDay();
+                    let hours = myDate.getHours();
+                    let minutes = myDate.getMinutes();
+                    let seconds = myDate.getSeconds();
+
+                    console.log(`${year}/${month}/${date}/${day}`);
+                    let displayDate = `${year}/${month}/${date} 星期${day} ${hours}:${minutes}`;
                     let desc = `<div class="desc">現在天氣 ${data.weather[0].description}</div?`;
                     let feels_like = `<div class="feels_like">體感溫度:${data.main.feels_like}&deg;C</div>`;
                     let temp = `<div class="temp">氣溫:${data.main.temp}&deg;C</div>`;
                     let max = `<div class="max">最高溫:${data.main.temp_max}&deg;C</div>`;
                     let min = `<div class="min">最低溫:${data.main.temp_min}&deg;C</div>`;
                     let humidity = `<div class="humidity">濕度:${data.main.humidity}%</div>`
-                    $('.container').append(desc,feels_like,temp,max,min,humidity)
+                    $('.container').append(displayDate,desc,feels_like,temp,max,min,humidity)
                 },
                 error(){
                     console.log('error');
