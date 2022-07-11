@@ -32,9 +32,11 @@
                     let hours = myDate.getHours();
                     let minutes = myDate.getMinutes();
                     let seconds = myDate.getSeconds();
-
+                    let dayArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+                    let dayArray_jp = ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'];
+                    let dayArray_us = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
                     console.log(`${year}/${month}/${date}/${day}`);
-                    let displayDate = `${year}/${month}/${date} 星期${day} ${hours}:${minutes}`;
+                    let displayDate = `${year}/${month}/${date} ${dayArray_us[day]} ${hours}:${minutes}`;
                     let desc = `<div class="desc">現在天氣 ${data.weather[0].description}</div?`;
                     let feels_like = `<div class="feels_like">體感溫度:${data.main.feels_like}&deg;C</div>`;
                     let temp = `<div class="temp">氣溫:${data.main.temp}&deg;C</div>`;
