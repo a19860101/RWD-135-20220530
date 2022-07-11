@@ -8,47 +8,62 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
 </head>
 <body>
+    <select name="" id="city">
+        <option>--請選擇--</option>
+        <option value="taipei">台北</option>
+        <option value="bangkok">曼谷</option>
+        <option value="seoul">首爾</option>
+        <option value="tokyo">東京</option>
+        <option value="osaka">大阪</option>
+        <option value="chicago">芝加哥</option>
+    </select>
     <div class="container">
     </div>
     <script>
         //b1ecbccd638b763d489602917ba47cc3
         $(function(){
-            $.ajax({
-                url:'https://api.openweathermap.org/data/2.5/weather',
-                datatype:'json',
-                data:{
-                    q: 'taipei',
-                    appid: 'b1ecbccd638b763d489602917ba47cc3',
-                    units: 'metric',
-                    lang: 'zh_TW'
-                },
-                success(data){
-                    console.log(data);
-                    let myDate = new Date(data.dt*1000);
-                    let year = myDate.getFullYear();
-                    let month = myDate.getMonth()+1;
-                    let date = myDate.getDate();
-                    let day = myDate.getDay();
-                    let hours = myDate.getHours();
-                    let minutes = myDate.getMinutes();
-                    let seconds = myDate.getSeconds();
-                    let dayArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
-                    let dayArray_jp = ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'];
-                    let dayArray_us = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
-                    console.log(`${year}/${month}/${date}/${day}`);
-                    let displayDate = `${year}/${month}/${date} ${dayArray_us[day]} ${hours}:${minutes}`;
-                    let desc = `<div class="desc">現在天氣 ${data.weather[0].description}</div?`;
-                    let feels_like = `<div class="feels_like">體感溫度:${data.main.feels_like}&deg;C</div>`;
-                    let temp = `<div class="temp">氣溫:${data.main.temp}&deg;C</div>`;
-                    let max = `<div class="max">最高溫:${data.main.temp_max}&deg;C</div>`;
-                    let min = `<div class="min">最低溫:${data.main.temp_min}&deg;C</div>`;
-                    let humidity = `<div class="humidity">濕度:${data.main.humidity}%</div>`
-                    $('.container').append(displayDate,desc,feels_like,temp,max,min,humidity)
-                },
-                error(){
-                    console.log('error');
-                }
+            $('#city').change(function(){
+                $('.container').empty();
+                let city = $(this).val();
+                console.log(city)
+                $.ajax({
+                    url:'https://api.openweathermap.org/data/2.5/weather',
+                    datatype:'json',
+                    data:{
+                        q: city,
+                        appid: 'b1ecbccd638b763d489602917ba47cc3',
+                        units: 'metric',
+                        lang: 'zh_TW'
+                    },
+                    success(data){
+                        console.log(data);
+                        let myDate = new Date(data.dt*1000);
+                        let year = myDate.getFullYear();
+                        let month = myDate.getMonth()+1;
+                        let date = myDate.getDate();
+                        let day = myDate.getDay();
+                        let hours = myDate.getHours();
+                        let minutes = myDate.getMinutes();
+                        let seconds = myDate.getSeconds();
+                        let dayArray = ['星期日','星期一','星期二','星期三','星期四','星期五','星期六'];
+                        let dayArray_jp = ['日曜日','月曜日','火曜日','水曜日','木曜日','金曜日','土曜日'];
+                        let dayArray_us = ['Sun','Mon','Tue','Wed','Thu','Fri','Sat'];
+                        console.log(`${year}/${month}/${date}/${day}`);
+                        let displayDate = `${year}/${month}/${date} ${dayArray[day]} ${hours}:${minutes}`;
+                        let desc = `<div class="desc">現在天氣 ${data.weather[0].description}</div?`;
+                        let feels_like = `<div class="feels_like">體感溫度:${data.main.feels_like}&deg;C</div>`;
+                        let temp = `<div class="temp">氣溫:${data.main.temp}&deg;C</div>`;
+                        let max = `<div class="max">最高溫:${data.main.temp_max}&deg;C</div>`;
+                        let min = `<div class="min">最低溫:${data.main.temp_min}&deg;C</div>`;
+                        let humidity = `<div class="humidity">濕度:${data.main.humidity}%</div>`
+                        $('.container').append(displayDate,desc,feels_like,temp,max,min,humidity)
+                    },
+                    error(){
+                        console.log('error');
+                    }
+                })
             })
+            
         })
     </script>
 </body>
