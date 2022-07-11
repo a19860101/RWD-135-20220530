@@ -10,8 +10,15 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css" integrity="sha512-17EgCFERpgZKcm0j0fEq1YCJuyAWdz9KUtv1EjVuaOz8pDnh/0nZxmU6BBXwaaxqoi9PQXnRWqlcDB027hgv9A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css" integrity="sha512-yHknP1/AwR+yx26cB1y0cjvQUMvEa2PFzt1c9LlS4pRQ5NOTZFWbhBig+X9G9eYW/8m0/4OXNx8pxJ6z57x0dw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
+        body {
+            background-color: #098;
+        }
         header {
             width: 1600px;
+            margin: auto;
+        }
+        #product {
+            width: 1200px;
             margin: auto;
         }
     </style>
@@ -39,11 +46,35 @@
             </div>
         </div>
     </header>
+    <div id="product">
+        <img src="https://picsum.photos/400/400?random=1" alt="">
+        <img src="https://picsum.photos/400/400?random=2" alt="">
+        <img src="https://picsum.photos/400/400?random=3" alt="">
+        <img src="https://picsum.photos/400/400?random=4" alt="">
+        <img src="https://picsum.photos/400/400?random=5" alt="">
+        <img src="https://picsum.photos/400/400?random=6" alt="">
+        <img src="https://picsum.photos/400/400?random=7" alt="">
+        <img src="https://picsum.photos/400/400?random=8" alt="">
+        <img src="https://picsum.photos/400/400?random=9" alt="">
+        <img src="https://picsum.photos/400/400?random=10" alt="">
+        <img src="https://picsum.photos/400/400?random=11" alt="">
+        <img src="https://picsum.photos/400/400?random=12" alt="">
+        <img src="https://picsum.photos/400/400?random=13" alt="">
+    </div>
     <script>
         $(function(){
             $('#slider').slick({
-                autoplay: true
+                autoplay: true,
+                autoplaySpeed:6000,
+                speed:1000,
+                fade: true,
+                dots: true,
+                arrows: true
+
             });
+            $('#product').slick({
+                slidesToShow:5,
+            })
         })
     </script>
 </body>
