@@ -14,11 +14,13 @@
             background-color: #098;
         }
         header {
-            width: 1600px;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
         }
         #product {
-            width: 1200px;
+            width: 90%;
+            max-width: 1200px;
             margin: auto;
         }
         #product img {
@@ -30,22 +32,22 @@
     <header>
         <div id="slider">
             <div>
-                <img src="https://picsum.photos/1600/800?random=1" alt="">
+                <img src="https://picsum.photos/1200/600?random=1" alt="">
             </div>
             <div>
-                <img src="https://picsum.photos/1600/800?random=2" alt="">
+                <img src="https://picsum.photos/1200/600?random=2" alt="">
             </div>
             <div>
-                <img src="https://picsum.photos/1600/800?random=3" alt="">
+                <img src="https://picsum.photos/1200/600?random=3" alt="">
             </div>
             <div>
-                <img src="https://picsum.photos/1600/800?random=4" alt="">
+                <img src="https://picsum.photos/1200/600?random=4" alt="">
             </div>
             <div>
-                <img src="https://picsum.photos/1600/800?random=5" alt="">
+                <img src="https://picsum.photos/1200/600?random=5" alt="">
             </div>
             <div>
-                <img src="https://picsum.photos/1600/800?random=6" alt="">
+                <img src="https://picsum.photos/1200/600?random=6" alt="">
             </div>
         </div>
     </header>
@@ -74,14 +76,44 @@
                 dots: true,
                 arrows: true,
                 centerMode: true,
-                centerPadding: '100px'
+                centerPadding: '100px',
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            arrows: false,
+                            dots: false,
+                            centerMode:false,
+                            centerPadding: '0px'
+                        }
+                    }
+                ]
 
             });
             $('#product').slick({
-                slidesToShow:5,
+                slidesToShow:6,
                 slidesToScroll: 1,
-                centerMode: true,
-                centerPadding: '100px'
+                responsive:[
+                    {
+                        breakpoint: 1200,
+                        settings: {
+                            slidesToShow: 5
+                        }
+                    },
+                    {
+                        breakpoint: 960,
+                        settings: {
+                            slidesToShow: 4
+                        }
+                    },
+                    {
+                        breakpoint: 600,
+                        settings: {
+                            slidesToShow: 2
+                        }
+                    }
+
+                ]
             })
         })
     </script>
