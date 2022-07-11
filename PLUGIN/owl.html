@@ -72,11 +72,19 @@
                 items:1,
                 loop: true,
                 autoplay: true,
-                nav: true
+                autoplayTimeout: 6000,
+                autoplaySpeed: 2000,
+                nav: true,
+                navSpeed: 2000,
+                dotsSpeed: 2000,
             });
             $('#product').owlCarousel({
-                items:5,
-                dots: false
+                items:6,
+                dots: true,
+                center: true,
+                loop: true,
+                nav: true,
+                margin: 15
             });
         })
     </script>
