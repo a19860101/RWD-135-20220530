@@ -79,12 +79,29 @@
                 dotsSpeed: 2000,
             });
             $('#product').owlCarousel({
-                items:6,
-                dots: true,
+                // items:6,
+                // dots: true,
                 center: true,
                 loop: true,
-                nav: true,
-                margin: 15
+                // nav: true,
+                margin: 15,
+                responsive:{
+                    0: {
+                        items:2,
+                        dots:false,
+                        nav:false,
+                    },
+                    600: {
+                        items: 4,
+                        dots: true,
+                        nav: false,
+                    },
+                    1200: {
+                        items: 6,
+                        dots: true,
+                        nav: true
+                    }
+                }
             });
         })
     </script>
