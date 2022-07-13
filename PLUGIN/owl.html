@@ -27,6 +27,13 @@
         #product img {
             margin-inline: 6px;
         }
+        .owl-theme .owl-nav [class*=owl-]{
+            transition: 600ms;
+        }
+        .owl-theme .owl-nav [class*=owl-]:hover {
+            background: initial;
+            color: #ffef0f;
+        }
     </style>
 </head>
 <body>
@@ -84,7 +91,6 @@
                 loop: true,
                 margin: 15,
                 navText:['<i class="fa-solid fa-circle-chevron-left fa-2x"></i>','<i class="fa-solid fa-circle-chevron-right fa-2x"></i>'],
-                // navElement: 'a',
                 responsive:{
                     0: {
                         items:2,
