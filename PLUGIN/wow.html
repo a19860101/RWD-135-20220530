@@ -7,6 +7,7 @@
     <title>Document</title>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/wow/1.1.2/wow.min.js" integrity="sha512-Eak/29OTpb36LLo2r47IpVzPBLXnAMPAVypbSZiZ4Qkf8p/7S/XRG5xp7OKWPPYfJT6metI+IORkR5G8F900+g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.compat.min.css" integrity="sha512-b42SanD3pNHoihKwgABd18JUZ2g9j423/frxIP5/gtYgfBz/0nDHGdY/3hi+3JwhSckM3JLklQ/T6tJmV7mZEw==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
     <style>
         * {
             margin: 0;
@@ -58,6 +59,12 @@
         #section-1 {background-color: #edfc6b;}
         #section-2 {background-color: #6cc2ff;}
         #section-3 {background-color: #83ffe4;}
+        .gotop {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            color: #000;
+        }
     </style>
 </head>
 <body>
@@ -155,6 +162,9 @@
             </div>
         </div>
     </section>
+    <a href="#" class="gotop">
+        <i class="fa-solid fa-circle-chevron-up fa-3x"></i>
+    </a>
     <script>
         new WOW().init();
     </script>
