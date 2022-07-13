@@ -164,7 +164,7 @@
             </div>
         </div>
     </section>
-    <a href="#" class="gotop">
+    <a href="#" class="gotop animated">
         <i class="fa-solid fa-circle-chevron-up fa-3x"></i>
     </a>
     <script>
@@ -173,10 +173,14 @@
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
                 console.log(h);
+                let animateIn = 'fadeInUp';
+                let animateOut = 'rollOut';
                 if(h > 600){
-                    $('.gotop').fadeIn();
+                    // $('.gotop').fadeIn();
+                    $('.gotop').show().removeClass(animateOut).addClass(animateIn)
                 }else{
-                    $('.gotop').fadeOut();
+                    // $('.gotop').fadeOut();
+                    $('.gotop').removeClass(animateIn).addClass(animateOut)
                 }
             });
         })
