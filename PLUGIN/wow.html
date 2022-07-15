@@ -191,14 +191,17 @@
                 }
                 $('nav').find('a').each(function(){
                     let href = $(this).attr('href');
-                    let h;
+                    let distance;
                     if(href === '#'){
-                        h = 0;
+                        distance = 0;
                     }else{
 
-                        h = $(href).offset().top;
+                        distance = $(href).offset().top;
                     }
-                    console.log(h);
+                    if( h >= distance - 200 ){
+                        $('nav').find('a.active').removeClass('active');
+                        $(this).addClass('active');
+                    }
                 })
             });
             // $('.gotop').click(function(e){
@@ -210,10 +213,10 @@
                 // return false;
                 
             // })
-            $('nav').find('a').click(function(){
-                $('nav').find('a.active').removeClass('active');
-                $(this).addClass('active');
-            })
+            // $('nav').find('a').click(function(){
+            //     $('nav').find('a.active').removeClass('active');
+            //     $(this).addClass('active');
+            // })
         })
     </script>
 </body>
