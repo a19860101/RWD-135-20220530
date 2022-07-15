@@ -179,7 +179,7 @@
         $(function(){
             $(window).scroll(function(){
                 let h = $(window).scrollTop();
-                console.log(h);
+                // console.log(h);
                 let animateIn = 'fadeInUp';
                 let animateOut = 'rollOut';
                 if(h > 600){
@@ -189,6 +189,17 @@
                     // $('.gotop').fadeOut();
                     $('.gotop').removeClass(animateIn).addClass(animateOut)
                 }
+                $('nav').find('a').each(function(){
+                    let href = $(this).attr('href');
+                    let h;
+                    if(href === '#'){
+                        h = 0;
+                    }else{
+
+                        h = $(href).offset().top;
+                    }
+                    console.log(h);
+                })
             });
             // $('.gotop').click(function(e){
                 
