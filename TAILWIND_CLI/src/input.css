@@ -1,3 +1,10 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+.btn-blue {
+    @apply inline-block rounded-md bg-blue-600 hover:bg-blue-400 px-5 py-2 duration-300 text-white
+}
+.btn-amber {
+    @apply inline-block rounded-md bg-amber-600 hover:bg-amber-400 px-5 py-2 duration-300 text-white
+}
